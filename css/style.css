@@ -2,6 +2,9 @@
     font-family:'Press Start 2P', cursive;
 
 }
+.btn-mobile {
+    display: none;
+}
 .container {
     display: grid;
     grid-template-columns: 340px 200px;
@@ -19,4 +22,39 @@
     background-color: chartreuse;
     padding: 1rem 2rem;
     cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: rgb(45,57,67);
+    }
+    .btn-mobile {
+        display: block;
+        font-size: 30px;
+        float: right;
+        margin: 10px;
+        cursor: pointer;
+    }
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .side-bar {
+        display: block;
+        text-align: center;
+        height: 100px;
+        color: white;
+    }
+    .side-bar p {
+        color: chartreuse;
+    }
+    #board {
+        border: 2px solid black;
+    }
+    .play-btn {
+        color: whit;
+        position: relative;
+        top: 750px;
+        padding: 10px 10px;
+    }
 }

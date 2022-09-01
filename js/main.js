@@ -421,7 +421,7 @@ document.getElementById("play").addEventListener("click", () => {
     } else {
       clearInterval(refresh);
     }
-  }, 1000);
+  }, 900);
 });
 
 document.addEventListener("keydown", (e) => {
