@@ -4,11 +4,11 @@ const BLOCK_SIZE = 30;
 const COLOR_MAPPING = [
   "red",
   "orange",
-  "cyan",
+  "purple",
   "green",
+  "cyan",
   "blue",
   "yellow",
-  "purple",
   "white",
 ];
 
@@ -259,7 +259,7 @@ class Board {
       this.handleScore(newScore * 15);
     } else if (newScore == 4) {
       board.grid = [...newRows, ...latestGrid];
-      this.handleScore(newScore * 25);
+      this.handleScore(newScore * 250);
     }
   }
 
