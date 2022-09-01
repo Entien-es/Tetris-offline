@@ -1,12 +1,25 @@
 * {
-    margin: 0;
-    box-sizing: border-box;
+    font-family:'Press Start 2P', cursive;
 }
 html {
-    font-family: cursive;
+    font-size: 12px;
 }
 
+
+.container {
+    display: grid;
+    grid-template-columns: 320px 200px;
+    justify-content: center;
+}
 .side-bar {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+}
+#board {
+    border: 2px solid #000;
+}
+.play-btn {
+    background-color: greenyellow;
+    padding: 1rem 2rem;
 }
