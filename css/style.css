@@ -22,4 +22,5 @@ html {
 .play-btn {
     background-color: greenyellow;
     padding: 1rem 2rem;
+    cursor: pointer;
 }
