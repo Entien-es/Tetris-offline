@@ -4,13 +4,81 @@ const block_size = 30;
 const color_mapping = [
     "red",
     "orange",
+    "yellow",
     "green",
     "blue",
     "cyan",
     "purple",
     "white",
 ];
-
+const brick_id = [
+    [
+        [
+            [0, 7, 7],
+            [0, 0, 0],
+            [7, 7, 7],
+        ],
+        [
+            [7, 0, 0],
+            [7, 0, 7],
+            [7, 0, 7],
+        ],
+        [
+            [7, 7, 7],
+            [0, 0, 0],
+            [7, 7, 0],
+        ],
+        [
+            [7, 0, 7],
+            [7, 0, 7],
+            [0, 0, 7],
+        ],
+    ],
+    [
+        [
+            [7, 7, 7],
+            [0, 0, 0],
+            [0, 7, 7],
+        ],
+        [
+            [0, 0, 7],
+            [7, 0, 7],
+            [7, 0, 7],
+        ],
+        [
+            [7, 7, 0],
+            [0, 0, 0],
+            [7, 7, 7],
+        ],
+        [
+            [7, 0, 7],
+            [7, 0, 7],
+            [7, 0, 0],
+        ],
+    ],
+    [
+        [
+            [7, 0, 7],
+            [0, 0, 0],
+            [7, 7, 7],
+        ],
+        [
+            [7, 0, 7],
+            [7, 0, 0],
+            [7, 0, 7],
+        ],
+        [
+            [7, 7, 7],
+            [0, 0, 0],
+            [7, 0, 7],
+        ],
+        [
+            [7, 0, 7],
+            [0, 0, 7],
+            [7, 0, 7],
+        ],
+    ],
+];
 const white_colorId = 7;
 const canvas = document.getElementById('board');
 const c = canvas.getContext('2d');
@@ -34,15 +102,28 @@ class Board {
     }
     drawBorad() {
         for(let row = 0; row < this.grid.length; row++) {
-            for (let col = 0; col < array.length[0]; col++) {
+            for (let col = 0; col < this.grid[0].length; col++) {
                 this.drawCell(col, row, white_colorId);
             }
         }
     }
 }
 
+
+class Brick {
+    constructor(id) {
+        this.id = id;
+        this.layout = brick_id[id];
+        this.activeIndex = 0;
+        this.colPos = 3;
+        this.rowPos = 5;
+    }
+    draw() {
+        
+    }
+}
+
 board = new Board(c);
 board.drawBorad();
 
-console.table(board.grid);
 
