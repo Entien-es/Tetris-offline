@@ -25,9 +25,10 @@
 .btn-main {
     flex-direction: column;
 }
-.play-btn, #pause{
+.play-btn, #pause {
+    border-radius: 10px;
     background-color: chartreuse;
-    padding: 1rem 2rem;
+    padding: 1rem 0;
     margin: 10px;
     cursor: pointer;
 }

@@ -367,7 +367,6 @@ class Brick {
       this.clear();
       this.rowPos++;
       this.draw();
-
       return;
     }
 
@@ -407,7 +406,7 @@ class Brick {
   }
 
   handleLanded() {
-    if (this.rowPos <= 0) {
+    if (this.rowPos < 0) {
       board.handleGameOver();
       return;
     }
@@ -433,7 +432,7 @@ board.drawBoard();
 
 document.getElementById("play").addEventListener("click", () => {
   board.reset();
-
+  document.getElementById("play").innerHTML = `Play Again`;
   board.isPlaying = true;
 
   generateNewBrick();
