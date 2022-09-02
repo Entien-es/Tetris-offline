@@ -2,6 +2,9 @@
     font-family:'Press Start 2P', cursive;
 
 }
+.flex {
+    display: flex;
+}
 .btn-mobile {
     display: none;
 }
@@ -18,12 +21,19 @@
 #board {
     border: 2px solid gray;
 }
-.play-btn {
+
+.btn-main {
+    flex-direction: column;
+}
+.play-btn, #pause{
     background-color: chartreuse;
     padding: 1rem 2rem;
+    margin: 10px;
     cursor: pointer;
 }
-
+#pause {
+    background-color: orange;
+}
 @media screen and (max-width: 480px) {
     body {
         background-color: rgb(45,57,67);
